@@ -4,10 +4,9 @@
 )
 
 #set text(
-  font: "Liberation Sans",
+  font: ("Liberation Sans", "Arial", "Helvetica Neue", "sans-serif"),
   size: 9.5pt,
   fill: rgb("#1f2937"),
-  spacing: 120%,
 )
 
 #set par(justify: false, leading: 0.52em)
@@ -21,22 +20,21 @@
 // --- Helper Functions ---
 #let section-heading(title) = {
   v(6pt)
-  text(fill: accent, weight: "bold", size: 10pt)[#upper(title)]
-  v(-3pt)
-  line(length: 100%, stroke: 0.6pt + line-rule)
-  v(2pt)
+  block(
+    width: 100%,
+    stroke: (bottom: 0.6pt + line-rule),
+    inset: (bottom: 2.5pt),
+  )[#text(fill: accent, weight: "bold", size: 10pt)[#upper(title)]]
+  v(1.5pt)
 }
 
 #let role-item(title, company, location, dates) = {
   block(width: 100%, inset: (bottom: 2pt))[
     #grid(
       columns: (1fr, auto),
+      row-gutter: 1.5pt,
       [*#company* -- #text(style: "italic")[#title]],
       [#text(fill: muted, size: 8.5pt)[#dates]],
-    )
-    #v(-2pt)
-    #grid(
-      columns: (1fr, auto),
       [],
       [#text(fill: muted, size: 8.5pt, style: "italic")[#location]],
     )
@@ -55,7 +53,7 @@
   #v(2pt)
   #text(size: 8.5pt, fill: muted)[
     #link("https://github.com/zgerbi")[github.com/zgerbi] #h(6pt) | #h(6pt)
-    #link("mailto:zachary.gerbi@gmail.com")[zachary.gerbi@gmail.com] #h(6pt) | #h(6pt)
+    #link("mailto:zachary.gerbi@gmail.com")[zachary.gerbi\@gmail.com] #h(6pt) | #h(6pt)
     (321) 591-4790
   ]
 ]
@@ -74,7 +72,7 @@
 - Collaborated with systems and hardware engineers to integrate new avionics components across diverse aircraft configurations.
 - Enforced software development, verification, and documentation standards compliant with DO-178B.
 
-#v(4pt)
+#v(3pt)
 #role-item(
   "Software Engineer Intern",
   "Epsilon C5I",
@@ -90,11 +88,10 @@
 // --- Technical Skills ---
 #section-heading("Technical Skills & Accreditations")
 
-#list(
-  marker: none,
-  body-indent: 0pt,
+#stack(
+  spacing: 3.5pt,
   [*Languages:* C++, C\#, Java, Python, Swift, Kaitai, MATLAB, SQL],
-  [*Cloud & Frameworks:* Amazon Web Services (AWS Glue, Lambda), React, PyTorch Lightning, JUCE],
+  [*Cloud & Frameworks:* Amazon Web Services (AWS Glue, AWS Lambda), React, PyTorch Lightning, JUCE],
   [*Embedded & Hardware:* Quartus, Waveforms, DO-178B Standards],
   [*Developer Tools & CI/CD:* Git, Jenkins, Unity, Linux, Windows, macOS, Atlassian Ecosystem],
   [*AI Tooling & Credentials:* Ollama, GitHub Copilot, Gemini | SolidWorks Certified, DOD Secret Clearance (Held)],
@@ -107,12 +104,12 @@
 - Ingests and visualizes FDR and FMS telemetry across fleet aircraft for pilots and maintenance crews to diagnose performance metrics and safety anomalies.
 - Built with a React web interface backed by a modular Swift upload framework, processing telemetry via AWS Glue and Lambda.
 
-#v(3pt)
+#v(2.5pt)
 #project-item("GatorBones", "AI/ML Image Segmentation | Python, PyTorch Lightning, CUDA")
 - Built a radiographic segmentation pipeline for UF's BRIO Lab to infer bone and joint coordinates from canine X-rays.
 - Implemented a SwinUNETR transformer architecture in PyTorch Lightning augmented with a Boundary Patch Refinement layer, trained across 1,000+ scans on UF's HiPerGator supercomputer.
 
-#v(3pt)
+#v(2.5pt)
 #project-item("Soundstage", "VST3 Spatial Audio Plugin | C++, JUCE")
 - Engineered a real-time 3D spatialization audio plugin applying Head-Related Transfer Functions (HRTF) from the CIPIC database.
 - Implemented real-time dynamic audio placement responsive to MIDI inputs and on-screen controls.
@@ -122,14 +119,11 @@
 
 #grid(
   columns: (1fr, auto),
+  row-gutter: 2pt,
   [*University of Florida* -- #text(style: "italic")[B.S. in Computer Science, Minor in Digital Arts & Sciences]],
   [#text(fill: muted, size: 8.5pt)[August 2018 – August 2023]],
-)
-#v(-2pt)
-#grid(
-  columns: (1fr, auto),
   [Dean's List (2022–2023)],
   [#text(fill: muted, size: 8.5pt, style: "italic")[Gainesville, FL]],
 )
-#v(2pt)
+#v(1.5pt)
 #text(size: 8.5pt)[*Coursework:* Data Structures & Algorithms, Operating Systems, Software Engineering, Digital Logic, 3D Audio, Database Systems, Computer Networking, Numerical & Data Analysis, Blockchain Development, UI/UX Design, Game Development.]
