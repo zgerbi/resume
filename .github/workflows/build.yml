@@ -1,4 +1,4 @@
-name: Build and Deploy Resume PDF
+name: Build and Host Resume PDF
 
 on:
   push:
@@ -11,12 +11,21 @@ on:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}Zachary_Gerbi_Resume.pdf
     steps:
-      - name: Check out repository
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Setup Typst
@@ -24,20 +33,26 @@ jobs:
 
       - name: Compile PDF
         run: |
-          typst compile resume.typ Zachary_Gerbi_Resume.pdf
+          mkdir -p dist
+          typst compile resume.typ dist/Zachary_Gerbi_Resume.pdf
 
-      - name: Upload PDF Artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: resume-pdf
-          path: Zachary_Gerbi_Resume.pdf
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
 
-      - name: Deploy to Output Branch
-        uses: peaceiris/actions-gh-pages@v4
+      - name: Upload Pages Artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: pdf-download
-          publish_dir: .
-          destination_dir: .
-          keep_files: false
-          exclude_assets: '.github,resume.typ,README.md'
+          path: 'dist'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: Publish Direct-Download Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: latest
+          name: Latest Resume Build
+          files: dist/Zachary_Gerbi_Resume.pdf
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
