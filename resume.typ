@@ -81,7 +81,7 @@
   "Largo, FL",
   "May 2022 – August 2022",
 )
-- Synchronized software deliverables on a $280M defense contract using Python, C++, and Jenkins CI pipelines.
+- Synchronized software deliverables on a \$280M defense contract using Python, C++, and Jenkins CI pipelines.
 - Optimized source code storage strategies to reduce repository footprint by 38%.
 - Collaborated within an Agile cross-functional team in an enterprise SAFe environment.
 - Presented Sprint and Epic retrospectives to engineering leads and executive stakeholders.
