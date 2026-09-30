@@ -24,19 +24,51 @@
 
 // --- SVG Icons ---
 #let icon-mail(color: c-muted, size: 8pt) = box(baseline: 15%, height: size)[
-  #image(bytes("<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='" + color.to-hex() + "' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect width='20' height='16' x='2' y='4' rx='2'/><path d='m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7'/></svg>"), format: "svg", height: size)
+  #image(
+    bytes(
+      "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='"
+        + color.to-hex()
+        + "' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect width='20' height='16' x='2' y='4' rx='2'/><path d='m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7'/></svg>",
+    ),
+    format: "svg",
+    height: size,
+  )
 ]
 
 #let icon-phone(color: c-muted, size: 8pt) = box(baseline: 15%, height: size)[
-  #image(bytes("<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='" + color.to-hex() + "' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z'/></svg>"), format: "svg", height: size)
+  #image(
+    bytes(
+      "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='"
+        + color.to-hex()
+        + "' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z'/></svg>",
+    ),
+    format: "svg",
+    height: size,
+  )
 ]
 
 #let icon-github(color: c-muted, size: 8pt) = box(baseline: 15%, height: size)[
-  #image(bytes("<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='" + color.to-hex() + "' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4'/><path d='M9 18c-4.51 2-5-2-7-2'/></svg>"), format: "svg", height: size)
+  #image(
+    bytes(
+      "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='"
+        + color.to-hex()
+        + "' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4'/><path d='M9 18c-4.51 2-5-2-7-2'/></svg>",
+    ),
+    format: "svg",
+    height: size,
+  )
 ]
 
 #let icon-map(color: c-muted, size: 8pt) = box(baseline: 15%, height: size)[
-  #image(bytes("<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='" + color.to-hex() + "' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0'/><circle cx='12' cy='10' r='3'/></svg>"), format: "svg", height: size)
+  #image(
+    bytes(
+      "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='"
+        + color.to-hex()
+        + "' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0'/><circle cx='12' cy='10' r='3'/></svg>",
+    ),
+    format: "svg",
+    height: size,
+  )
 ]
 
 // --- Pill Chip ---
@@ -91,6 +123,7 @@
       [
         #text(fill: c-muted, size: 8.5pt, weight: "medium")[#dates]
       ],
+
       [
         #text(fill: c-muted, size: 8pt)[#icon-map(size: 7pt) #location]
       ],
@@ -100,14 +133,18 @@
 }
 
 // --- Project Entry ---
-#let project(title, tech-list) = {
+#let project(title, subtitle: none, tech-list) = {
   block(width: 100%, inset: (bottom: 2pt))[
     #grid(
-      columns: (auto, 1fr),
+      columns: (1fr, auto),
       gutter: 8pt,
       align: horizon,
       [
         #text(weight: "bold", size: 9.5pt, fill: c-primary)[#title]
+        #if subtitle != none [
+          #text(fill: c-muted)[ · ]
+          #text(style: "italic", size: 8.5pt, fill: c-body)[#subtitle]
+        ]
       ],
       [
         #align(right)[
@@ -122,9 +159,12 @@
 }
 
 // Custom Bullet
-#set list(marker: [
-  #box(baseline: 10%, circle(radius: 1.8pt, fill: c-accent))
-], spacing: 6.5pt)
+#set list(
+  marker: [
+    #box(baseline: 10%, circle(radius: 1.8pt, fill: c-accent))
+  ],
+  spacing: 6.5pt,
+)
 
 // ==========================================
 //               HEADER
@@ -190,17 +230,19 @@
   [
     #chip("C++") #chip("C#") #chip("Java") #chip("Python") #chip("Swift") #chip("Kaitai") #chip("MATLAB") #chip("SQL")
   ],
-  
+
   [#text(weight: "bold", size: 8.5pt, fill: c-primary)[Cloud & Frameworks]],
   [
     #chip("AWS (Glue, Lambda)") #chip("React") #chip("JUCE")
   ],
-  
+
   [#text(weight: "bold", size: 8.5pt, fill: c-primary)[Developer Tools]],
   [
-    #chip("Git") #chip("Linux") #chip("macOS") #chip("Windows") #chip("Atlassian Ecosystem") #chip("AI Tools (Ollama, Copilot, Gemini)")
+    #chip("Git") #chip("Linux") #chip("macOS") #chip("Windows") #chip("Atlassian Ecosystem") #chip(
+      "AI Tools (Ollama, Copilot, Gemini)",
+    )
   ],
-  
+
   [#text(weight: "bold", size: 8.5pt, fill: c-primary)[Standards & Practices]],
   [
     DO-178B Compliance #text(fill: c-muted)[ · ] SAFe Agile #text(fill: c-muted)[ · ] SolidWorks Certified #text(fill: c-muted)[ · ] Former DOD Secret Clearance
@@ -212,19 +254,31 @@
 // ==========================================
 #section("Featured Projects")
 
-#project("UA FlightReview", ("React", "Swift", "C#", "AWS Glue", "AWS Lambda"))
-- Architected an iPad application ingesting FDR and FMS telemetry across airline fleets to identify safety events and trends.
-- Engineered a high-throughput Swift upload library paired with a responsive React dashboard for telemetry visualization.
+#project(
+  "UA FlightReview",
+  subtitle: "Connected Avionics Flight Data Analysis",
+  ("React", "Swift", "C#", "AWS Glue", "AWS Lambda"),
+)
+- Built an iPad application for pilots and maintenance personnel to upload and analyze FDR and FMS telemetry across aircraft fleets.
+- Developed a React interface for flight metric visualization, backed by a custom Swift upload framework and AWS Glue/Lambda cloud processing.
 
 #v(5pt)
-#project("GatorBones", ("Python", "PyTorch Lightning", "CUDA"))
-- Built a radiographic segmentation pipeline for UF's BRIO Lab to infer bone coordinates from canine X-rays.
-- Implemented a SwinUNETR transformer architecture with Boundary Patch Refinement; trained on 1,000+ scans using UF's HiPerGator supercomputer.
+#project(
+  "GatorBones",
+  subtitle: "AI/ML Image Segmentation",
+  ("Python", "MONAI", "CUDA"),
+)
+- Developed an image recognition model for UF's BRIO Lab to determine bone and joint placements from canine X-rays.
+- Implemented a SwinUNETR transformer architecture with Boundary Patch Refinement; trained on 1,000+ scans using UF's HiPerGator supercomputer and NVIDIA CUDA.
 
 #v(5pt)
-#project("Soundstage", ("C++", "JUCE"))
-- Built a real-time VST3 spatial audio plugin implementing Head-Related Transfer Functions (HRTF) from the CIPIC database.
-- Synthesized 3D auditory location simulation driven by live MIDI velocity inputs and interactive GUI controls.
+#project(
+  "Soundstage",
+  subtitle: "VST3 Audio Plugin",
+  ("C++", "JUCE"),
+)
+- Built a real-time VST3 audio plugin using the JUCE framework that processes audio to simulate 3D spatial location in virtual space.
+- Implemented Head-Related Transfer Functions (HRTF) from the CIPIC database, controlled by live MIDI inputs or interactive GUI controls.
 
 // ==========================================
 //               EDUCATION
@@ -242,6 +296,7 @@
   [
     #text(fill: c-muted, size: 8.5pt, weight: "medium")[Aug 2018 – Aug 2023]
   ],
+
   [
     Minor in Digital Arts & Sciences | Dean's List (2022–2023)
   ],
