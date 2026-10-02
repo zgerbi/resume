@@ -31,10 +31,12 @@ jobs:
       - name: Setup Typst
         uses: typst-community/setup-typst@v3
 
-      - name: Compile PDF
+      - name: Compile PDF and Preview Image
         run: |
           mkdir -p dist
           typst compile resume.typ dist/Zachary_Gerbi_Resume.pdf
+          typst compile --ppi 250 resume.typ dist/preview-{p}.png
+          cp dist/preview-1.png dist/preview.png
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -53,6 +55,8 @@ jobs:
         with:
           tag_name: latest
           name: Latest Resume Build
-          files: dist/Zachary_Gerbi_Resume.pdf
+          files: |
+            dist/Zachary_Gerbi_Resume.pdf
+            dist/preview.png
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
