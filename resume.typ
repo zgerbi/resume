@@ -200,9 +200,9 @@
   "Sept 2023 – June 2026",
 )
 - Developed and deployed embedded C++ software for safety-critical avionics flight display components.
-- Led full-stack development on connected avionics iPad applications for data-driven fleet and post-flight telemetry analysis with AWS.
 - Partnered with systems and hardware engineering teams to integrate components across diverse aircraft airframes.
 - Enforced strict DO-178B software development, peer code review, and verification standards.
+- Full-stack development on connected avionics iPad applications for data-driven fleet and post-flight telemetry analysis with AWS.
 
 #v(5pt)
 #role(
